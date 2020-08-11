@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const Note = require('./models/note')
 const User = require('./models/user')
+const MyNotesID = require('./models/myNotesID')
 mongoose.connect('mongodb://admin:PASSpass9@24.57.226.129:27117/cust-care-db?authSource=admin',{ useNewUrlParser: true, useUnifiedTopology: true })
 
 const port = 8000
@@ -49,6 +50,13 @@ app.route('/myNotes')
 app.route('/users')
 .get((req, res)=>{
     User.find(
+        (err, data)=>{sendResponse(res, err, data)}
+    )
+})
+
+app.route('/myNotesID')
+.get((req, res)=>{
+    MyNotesID.find(
         (err, data)=>{sendResponse(res, err, data)}
     )
 })
