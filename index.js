@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const Note = require('./models/note')
 const User = require('./models/user')
 const MyNotesID = require('./models/myNotesID')
+const Auth = require('./services/authService.js')
 mongoose.connect('mongodb://admin:PASSpass9@24.57.226.129:27117/cust-care-db?authSource=admin',{ useNewUrlParser: true, useUnifiedTopology: true })
 
 const port = 8000
