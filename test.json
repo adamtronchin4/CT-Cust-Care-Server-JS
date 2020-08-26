@@ -1,0 +1,97 @@
+[
+    {
+      "min_ago": 0,
+      "Store": "0055",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 0,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430",
+      "Location": {
+        "Aisle": "Garden Centre"
+      }
+    },
+    {
+      "min_ago": 0,
+      "Store": "0121",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 0,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430",
+      "Location": {
+        "Aisle": "Garden Centre Wall"
+      }
+    },
+    {
+      "min_ago": 0,
+      "Store": "0172",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 60,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430",
+      "Location": {
+        "Aisle": "Garden Centre"
+      }
+    },
+    {
+      "min_ago": 0,
+      "Store": "0199",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 87,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430",
+      "Location": {
+        "Aisle": "Aisle 0OUT"
+      }
+    },
+    {
+      "min_ago": 0,
+      "Store": "0215",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 17,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430"
+    },
+    {
+      "min_ago": 0,
+      "Store": "0236",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 83,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430",
+      "Location": {
+        "Aisle": "Entrance Area"
+      }
+    },
+    {
+      "min_ago": 0,
+      "Store": "0281",
+      "SKU": "0594405",
+      "CheckDigit": "6",
+      "Product": "0594405P",
+      "Price": 7.99,
+      "Quantity": 37,
+      "Description": "MG ALL PURP 28.3 L",
+      "PartNumber": "72729430",
+      "Location": {
+        "Aisle": "Garden Centre"
+      }
+    }
+  ]

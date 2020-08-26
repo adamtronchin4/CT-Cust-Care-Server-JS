@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const jwt = require('jsonwebtoken')
 const Note = require('./models/note')
 const User = require('./models/user')
 const MyNotesID = require('./models/myNotesID')
@@ -41,23 +42,41 @@ function sendResponse(res, err, data){
     }
 }
 
-app.route('/myNotes')
-.get((req, res)=>{
+function authenticate(req, res, next){
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.split(' ')[1]
+    if(token == null){
+        return res.sendStatus(401)
+    }
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) =>{
+        if(err){ 
+            console.log(err)
+            return res.sendStatus(403)
+        }
+        req.user = user
+        next()
+    })
+}
+
+function getUserMyNotes(req, res, err, data){
     Note.find(
         (err, data)=>{sendResponse(res, err, data)}
     )
+}
+
+app.all('/', function (req, res, next) {
+    console.log('Accessing the secret section ...')
+    next() // pass control to the next handler
+})
+
+app.route('/myNotes')
+.get((req, res)=>{
+    getUserMyNotes(req, res)
 })
 
 app.route('/users')
 .get((req, res)=>{
     User.find(
-        (err, data)=>{sendResponse(res, err, data)}
-    )
-})
-
-app.route('/myNotesID')
-.get((req, res)=>{
-    MyNotesID.find(
         (err, data)=>{sendResponse(res, err, data)}
     )
 })
